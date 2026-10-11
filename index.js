@@ -1,4 +1,5 @@
 import express from "express";
+require('dotenv').config();
 import { Client, Events, GatewayIntentBits } from "discord.js";
 
 // Create a dummy Express server to satisfy Render's web service requirement
@@ -110,6 +111,4 @@ client.on("interactionCreate", (interaction) => {
   interaction.reply("Pong");
 });
 
-client.login(
-  "MTU1ODUxOTEyNTUxOTc2MTQzMA.GczQjO.M26D-p26tlMmLQpvcvuN9cwWfKSjR5sCAtNfJ8",
-);
+client.login(process.env.DISCORD_TOKEN);
