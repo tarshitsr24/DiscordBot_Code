@@ -1,5 +1,5 @@
+import 'dotenv/config';
 import express from "express";
-require('dotenv').config();
 import { Client, Events, GatewayIntentBits } from "discord.js";
 
 // Create a dummy Express server to satisfy Render's web service requirement
